@@ -45,7 +45,7 @@ func (*server) Download(req *pb.DownloadRequest, stream pb.FileService_DownloadS
 	fmt.Println("Download was invoked")
 
 	filename := req.GetFilename()
-	path := "/Users/gotandakazutaka/workspace/grpc-lesson/storage" + filename
+	path := "/Users/gotandakazutaka/workspace/grpc-lesson/storage/" + filename
 
 	file, err := os.Open(path)
 	if err != nil {
